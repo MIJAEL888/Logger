@@ -4,7 +4,7 @@ package com.belatrix.logger.util;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class LoggerDataBase {
+public class LoggerDao {
 
     public void logText(String messageText, Level level) {
         try {

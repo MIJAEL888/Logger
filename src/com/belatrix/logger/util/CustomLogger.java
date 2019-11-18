@@ -11,9 +11,9 @@ public class CustomLogger {
     private static Logger logger = Logger.getLogger("MyLogger");
     private static final String FILE_NAME = "./MyLogger.log";
     private LoggerConfig loggerConfig;
-    private LoggerDataBase loggerDataBase;
+    private LoggerDao loggerDataBase;
 
-    public CustomLogger(LoggerConfig loggerConfig, LoggerDataBase loggerDataBase) {
+    public CustomLogger(LoggerConfig loggerConfig, LoggerDao loggerDataBase) {
         this.loggerConfig = loggerConfig;
         this.loggerDataBase = loggerDataBase;
         addAppenders();
@@ -21,7 +21,7 @@ public class CustomLogger {
 
     public CustomLogger(LoggerConfig loggerConfig) {
         this.loggerConfig = loggerConfig;
-        this.loggerDataBase = new LoggerDataBase();
+        this.loggerDataBase = new LoggerDao();
         addAppenders();
     }
 

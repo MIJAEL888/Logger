@@ -3,7 +3,6 @@ package com.belatrix.logger.util;
 import org.junit.Test;
 
 import static org.mockito.Mockito.*;
-import static org.junit.Assert.*;
 
 public class CustomLoggerTest {
 
@@ -28,7 +27,7 @@ public class CustomLoggerTest {
     }
     @Test
     public void logInfoOnDataBase() {
-        LoggerDataBase test = mock(LoggerDataBase.class);
+        LoggerDao test = mock(LoggerDao.class);
         doNothing().when(test).logText(isA(String.class), isA(Level.class));
         LoggerConfig loggerConfig =  new LoggerConfig();
         loggerConfig.addLevel(Level.INFO);
@@ -56,7 +55,7 @@ public class CustomLoggerTest {
     }
     @Test
     public void logErrorOnDataBase() {
-        LoggerDataBase test = mock(LoggerDataBase.class);
+        LoggerDao test = mock(LoggerDao.class);
         doNothing().when(test).logText(isA(String.class), isA(Level.class));
         LoggerConfig loggerConfig =  new LoggerConfig();
         loggerConfig.addLevel(Level.INFO);
@@ -84,7 +83,7 @@ public class CustomLoggerTest {
     }
     @Test
     public void logWarningDataBase() {
-        LoggerDataBase test = mock(LoggerDataBase.class);
+        LoggerDao test = mock(LoggerDao.class);
         doNothing().when(test).logText(isA(String.class), isA(Level.class));
         LoggerConfig loggerConfig =  new LoggerConfig();
         loggerConfig.addLevel(Level.INFO);
