@@ -9,7 +9,7 @@ import static com.belatrix.logger.util.Level.INFO;
 
 public class CustomLogger {
     private static Logger logger = Logger.getLogger("MyLogger");
-
+    private static final String FILE_NAME = "./MyLogger.log";
     private LoggerConfig loggerConfig;
     private LoggerDataBase loggerDataBase;
 
@@ -65,7 +65,7 @@ public class CustomLogger {
     private void addAppenderFile(){
         FileHandler fileHandler  = null;
         try {
-            fileHandler = new FileHandler("./MyLogger.log");
+            fileHandler = new FileHandler(FILE_NAME);
         } catch (IOException e) {
             e.printStackTrace();
         }
